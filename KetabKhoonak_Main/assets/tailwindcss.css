@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Peyda Font Pack */
+
+@font-face {
+    font-family: 'Peyda';
+    src: url('./fonts/Peyda/Peyda-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Peyda';
+    src: url('./fonts/Peyda/Peyda-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Peyda';
+    src: url('./fonts/Peyda/Peyda-ExtraBold.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
