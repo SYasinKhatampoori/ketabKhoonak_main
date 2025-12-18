@@ -4,7 +4,11 @@ import router from "#app/plugins/router";
 const route = useRoute()
 definePageMeta({
   layout: false,
-  title: 'ثبت نام'
+  title: 'ثبت نام',
+  pageTransition: {
+    name: 'auth-right'
+  }
+
 })
 useHead({
   title:`کتابخونک | ${route.meta.title as String}`
@@ -28,7 +32,9 @@ useHead({
           <input type="submit" value="تایید" class="w-[330px] py-[13px] px-[42px] bg-[#C0C0C0] rounded-[20px] font-peyda font-medium">
         </form>
         <span class="font-peyda font-medium">ورود شما به معنای پذیرش <span class="text-blue-700 cursor-pointer">شرایط کتابخونک </span> و <span class="text-blue-700 cursor-pointer">قوانین حریم خصوصی</span> است</span>
-        <div class="flex justify-center gap-2 items-center w-full my-4">
+        <span class="font-peyda font-medium text-md my-2">اکانت دارید؟ پس <nuxt-link to="/account/login" class=" text-blue-700"><span>وارد شید</span></nuxt-link></span>
+
+        <div class="flex justify-center gap-2 items-center w-full my-2">
           <span class="w-[33%] h-[2px] bg-[#00000080]"></span>
           <span class="font-peyda font-medium">با طریق</span>
           <span class="w-[33%] h-[2px] bg-[#00000080]"></span>
