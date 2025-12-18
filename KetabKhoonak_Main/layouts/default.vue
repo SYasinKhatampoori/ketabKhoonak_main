@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+  const open = ref(false);
 </script>
 
 <template>
@@ -17,13 +17,42 @@
     <!--    buttons-->
     <div class="flex justify-evenly items-center w-[379px]">
       <button class="font-peyda font-bold text-[20px]
+    bg-[#E4C09B]  py-[20px] px-[5px] rounded-[10px]
+      shadow-[inset_0_3px_0_0_#00000040,inset_0_-3px_0_0_#00000040]
+      outline-none">کتابخانه من</button>
+      <button @click="open = !open" class="font-peyda font-bold text-[20px]
       bg-[#CBA985] py-[20px] px-[5px] rounded-[10px]
        shadow-[inset_0_3px_0_0_#00000040,inset_0_-3px_0_0_#00000040]
       outline-none">ورود و ثبت نام</button>
-      <button class="font-peyda font-bold text-[20px]
-bg-[#E4C09B]  py-[20px] px-[5px] rounded-[10px]
-shadow-[inset_0_3px_0_0_#00000040,inset_0_-3px_0_0_#00000040]
- outline-none">کتابخانه من</button>
+      <Transition
+          enter-active-class="transition-all duration-300 ease-out"
+          enter-from-class="opacity-0 -translate-y-3 scale-95"
+          enter-to-class="opacity-100 translate-y-0 scale-100"
+          leave-active-class="transition-all duration-200 ease-in"
+          leave-from-class="opacity-100 translate-y-0 scale-100"
+          leave-to-class="opacity-0 -translate-y-3 scale-95"
+      >
+        <div
+            v-if="open"
+            class="absolute -bottom-24 left-[119px] w-44
+        bg-[#CBA985] rounded-xl shadow-lg
+        flex items-center justify-center flex-col overflow-hidden"
+        >
+          <NuxtLink @click="open = false"
+              to="/account/login"
+              class="w-full px-4 py-3 hover:bg-[#E4C09B] transition text-center"
+          >
+            ورود
+          </NuxtLink>
+
+          <NuxtLink @click="open = false"
+              to="/account/signup"
+              class="w-full px-4 py-3 hover:bg-[#E4C09B] transition text-center"
+          >
+            ثبت نام
+          </NuxtLink>
+        </div>
+      </Transition>
     </div>
   </header>
   <main>
@@ -62,9 +91,11 @@ shadow-[inset_0_3px_0_0_#00000040,inset_0_-3px_0_0_#00000040]
         <h1>تماس باما</h1>
       </div>
       <div class="flex flex-col items-center justify-center">
-        <h1 class="font-peyda font-bold">کتابخونک را در شبکه‌های اجتماعی دنبال کنید:</h1>
-        <div>
-
+        <h1 class="font-peyda font-bold my-4">کتابخونک را در شبکه‌های اجتماعی دنبال کنید:</h1>
+        <div class="flex justify-center items-center gap-x-5 ">
+          <img class="w-[45px] cursor-pointer" src="../assets/images/google.png">
+          <img class="w-[45px] cursor-pointer" src="../assets/images/facebook.png">
+          <img class="w-[45px] cursor-pointer" src="../assets/images/linkin.png">
         </div>
       </div>
     </div>
