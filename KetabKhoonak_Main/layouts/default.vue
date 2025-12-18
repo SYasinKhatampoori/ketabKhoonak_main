@@ -12,7 +12,7 @@
     </div>
     <!--    logo-->
     <div class="absolute">
-      لوگو
+      <img src="../assets/icons/logo.png" class="w-[200px] ">
     </div>
     <!--    buttons-->
     <div class="flex justify-evenly items-center w-[379px]">
@@ -31,7 +31,8 @@ shadow-[inset_0_3px_0_0_#00000040,inset_0_-3px_0_0_#00000040]
   </main>
   <footer class="absolute bottom-0 w-full h-[318px] bg-[#987B5E] flex justify-evenly items-center ">
 <!--    about us-->
-    <div class=" flex justify-center items-center w-auto p-5 h-[194px] border-l-4 border-[#00000080]">
+    <div class=" flex justify-center items-start flex-col w-auto p-5 h-[194px] border-l-4 border-[#00000080]">
+      <img src="../assets/icons/logo.png" class="w-[200px] ">
       <h1 class="w-[382px] font-peyda font-medium text-white text-[20px] text-start">اواسط سال ۱۴۰۴، چند جوان پرانرژی
         و ایده‌پرداز دور هم جمع شدیم
         تا یک کار خیری را از رویا به واقعیت تبدیل کنیم.  ما تصمیم گرفتیم برای کتابخانه‌هایی
