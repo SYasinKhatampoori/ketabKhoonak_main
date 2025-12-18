@@ -26,9 +26,9 @@ useHead({
         </nuxt-link>
         <span class="font-peyda font-bold text-xl">ورود</span>
         <span class="font-peyda font-bold text-md text-[#00000099] mt-4">برای ورود فرم زیر را پر کنید</span>        <form action="/" class="flex justify-evenly items-center flex-col my-4 h-[200px]">
-          <input type="text" placeholder="نام کاربری" class="w-[330px] py-[13px] px-[42px] outline-none rounded-[20px] font-peyda border border-[#000000B2] bg-transparent placeholder:font-peyda placeholder:font-medium placeholder:text-black placeholder:opacity-80">
-          <input type="password" placeholder="رمز" class="w-[330px] py-[13px] px-[42px] outline-none rounded-[20px] font-peyda border border-[#000000B2] bg-transparent placeholder:font-peyda placeholder:font-medium placeholder:text-black placeholder:opacity-80">
-          <input type="submit" value="تایید" class="w-[330px] py-[13px] px-[42px] bg-[#C0C0C0] rounded-[20px] font-peyda font-medium">
+          <input type="text" placeholder="نام کاربری" class="w-[330px] py-[13px] px-[13px] outline-none rounded-[20px] font-peyda border border-[#000000B2] bg-transparent placeholder:font-peyda placeholder:font-medium placeholder:text-black placeholder:opacity-80">
+          <input type="password" placeholder="رمز" class="w-[330px] py-[13px] px-[13px] outline-none rounded-[20px] font-peyda border border-[#000000B2] bg-transparent placeholder:font-peyda placeholder:font-medium placeholder:text-black placeholder:opacity-80">
+          <input type="submit" value="تایید" class="w-[330px] py-[13px] px-[13px] bg-[#C0C0C0] rounded-[20px] font-peyda font-medium">
         </form>
         <span class="font-peyda font-medium">ورود شما به معنای پذیرش <span class="text-blue-700 cursor-pointer">شرایط کتابخونک </span> و <span class="text-blue-700 cursor-pointer">قوانین حریم خصوصی</span> است</span>
         <span class="font-peyda font-medium text-md my-2">اکانت ندارید؟ پس <nuxt-link to="/account/signup" class=" text-blue-700"><span>بسازید</span></nuxt-link></span>

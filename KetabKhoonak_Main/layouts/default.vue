@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div class="w-full h-screen flex flex-col space-between items-center bg-[#FED8B1]">
-  <header class="relative w-full h-[100px] bg-[#E4C09B] flex justify-center gap-x-[900px] items-center">
+  <div class="w-full flex flex-col justify-between items-center bg-[#FED8B1]">
+  <header class="w-full h-[100px] bg-[#E4C09B] flex justify-center gap-x-[900px] items-center">
 
     <!--    menu-->
     <div class="flex flex-col items-center justify-center w-[68px] h-[68px] bg-[#CBA985] rounded-full cursor-pointer">
@@ -29,7 +29,7 @@
   <main>
     <slot/>
   </main>
-  <footer class="absolute bottom-0 w-full h-[318px] bg-[#987B5E] flex justify-evenly items-center ">
+  <footer class="w-full h-[318px] bg-[#987B5E] flex justify-evenly items-center ">
 <!--    about us-->
     <div class=" flex justify-center items-start flex-col w-auto p-5 h-[194px] border-l-4 border-[#00000080]">
       <img src="../assets/icons/logo.png" class="w-[200px] ">
