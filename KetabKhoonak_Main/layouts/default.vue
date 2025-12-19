@@ -11,13 +11,11 @@
       <img class="w-[42px] h-[42px]" src="../assets/icons/menu-svgrepo-com.svg" alt="">
     </div>
 
+    <img src=".././assets/icons/logo.png" class="absolute w-[283px]">
+
     <!--    buttons-->
 
     <div class="flex justify-evenly items-center w-[379px]">
-        <button class="font-peyda font-bold text-[20px]
-      bg-[#E4C09B]  py-[20px] px-[5px] rounded-[10px]
-        shadow-[inset_0_3px_0_0_#00000040,inset_0_-3px_0_0_#00000040]
-        outline-none">کتابخانه من</button>
       <nuxt-link to="/account/login">
         <button class="font-peyda font-bold text-[20px]
         bg-[#CBA985] py-[20px] px-[5px] rounded-[10px]

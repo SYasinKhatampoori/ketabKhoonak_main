@@ -6,6 +6,22 @@ definePageMeta({
 useHead({
   title: `کتابخونک | ${route.meta.title as String}`,
 })
+
+const name = ref('')
+const phone = ref('')
+const username = ref('')
+const email = ref('')
+
+const edit = ref(false) // پیش‌فرض false
+
+watch([name, phone, username, email], () => {
+  edit.value =
+      name.value.trim() !== '' &&
+      phone.value.trim() !== '' &&
+      username.value.trim() !== '' &&
+      email.value.trim() !== ''
+})
+
 </script>
 
 <template>
@@ -23,27 +39,42 @@ useHead({
     <form action="/" class="flex items-center justify-start w-[1046.5px] flex-col relative">
       <div class="flex flex-row justify-between items-center">
         <div class="flex justify-evenly items-center flex-col gap-y-[63px]">
-          <input placeholder="نام" type="text" class="w-[430px] p-[12px] border border-[#000000B2] bg-transparent rounded-[20px] outline-none placeholder:font-peyda placeholder:font-medium placeholder:text-black placeholder:opacity-80">
-          <input placeholder="شماره تلفن" type="text" class="w-[430px] p-[12px] border border-[#000000B2] bg-transparent rounded-[20px] outline-none placeholder:font-peyda placeholder:font-medium placeholder:text-black placeholder:opacity-80">
+          <input v-model="name" placeholder="نام" type="text"
+                 class="w-[430px] p-[12px] border border-[#000000B2] bg-transparent rounded-[20px] outline-none placeholder:text-black placeholder:opacity-75" />
+
+          <input v-model="phone" placeholder="شماره تلفن" type="text"
+                 class="w-[430px] p-[12px] border border-[#000000B2] bg-transparent rounded-[20px] outline-none placeholder:text-black placeholder:opacity-75" />
         </div>
+
         <div class="mx-10 flex justify-center items-center">
-          <span class="h-[276.64801025390625px] w-[1px] bg-[#00000080] "></span>
+          <span class="h-[276px] w-[1px] bg-[#00000080]"></span>
         </div>
+
         <div class="flex justify-evenly items-center flex-col gap-y-[63px]">
-          <input placeholder="نام کاربری" type="text" class="w-[430px] p-[12px] border border-[#000000B2] bg-transparent rounded-[20px] outline-none placeholder:font-peyda placeholder:font-medium placeholder:text-black placeholder:opacity-80">
-          <input placeholder="ایمیل" type="text" class="w-[430px] p-[12px] border border-[#000000B2] bg-transparent rounded-[20px] outline-none placeholder:font-peyda placeholder:font-medium placeholder:text-black placeholder:opacity-80">
+          <input v-model="username" placeholder="نام کاربری" type="text"
+                 class="w-[430px] p-[12px] border border-[#000000B2] bg-transparent rounded-[20px] outline-none placeholder:text-black placeholder:opacity-75" />
+
+          <input v-model="email" placeholder="ایمیل" type="text"
+                 class="w-[430px] p-[12px] border border-[#000000B2] bg-transparent rounded-[20px] outline-none placeholder:text-black placeholder:opacity-75" />
         </div>
       </div>
 
       <div class="flex justify-end items-center flex-row gap-x-3 w-[940.5px]">
-        <button class="w-[170px]  h-[48px] py-[8px] px[16px] bg-transparent border border-[#00000099] rounded-[12px] flex items-center justify-center gap-3  text-black">
-          <span>انصراف</span>
+        <button
+            class="w-[170px] h-[48px] bg-transparent border border-[#00000099] rounded-[12px] flex items-center justify-center text-black placeholder:text-black placeholder:opacity-75">
+          انصراف
         </button>
-        <button class="w-[170px] h-[48px] py-[8px] px[16px] bg-[#7F654C] rounded-[12px] flex items-center justify-center gap-3  text-[#FFFFFF]">
+
+        <button
+            :class="edit ? 'bg-[#4C3B2A] text-white' : 'bg-[#7F654C] text-white'"
+            class="w-[170px] h-[48px] rounded-[12px] flex items-center justify-center gap-3 transition"
+            :disabled="!edit"
+        >
           <span>ذخیره اطلاعات</span>
-          <img src="../assets/icons/check.svg" class="w-[17.59000015258789px]">
+          <img src="../assets/icons/check.svg" class="w-[17px]" />
         </button>
       </div>
+
     </form>
   </div>
 </template>
