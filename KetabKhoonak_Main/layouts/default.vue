@@ -24,7 +24,7 @@
       </nuxt-link>
     </div>
   </header>
-  <main>
+  <main class="w-full">
     <slot/>
   </main>
   <footer class="w-full h-[318px] bg-[#987B5E] flex justify-evenly items-center ">
