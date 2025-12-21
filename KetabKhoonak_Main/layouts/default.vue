@@ -11,7 +11,7 @@
       <img class="w-[42px] h-[42px]" src="../assets/icons/menu-svgrepo-com.svg" alt="">
     </div>
 
-    <img src=".././assets/icons/logo.png" class="absolute w-[283px]">
+    <nuxt-link to="/" class="absolute w-[283px]"><img src=".././assets/icons/logo.png" class=""></nuxt-link>
 
     <!--    buttons-->
 
