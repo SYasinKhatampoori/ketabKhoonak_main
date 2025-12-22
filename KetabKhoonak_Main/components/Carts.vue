@@ -11,7 +11,7 @@ defineProps({
 <template>
   <div class="cursor-pointer w-[183px] h-[318px] rounded-[18px] bg-[#E4C09B] flex flex-col justify-evenly items-center">
     <div class="flex flex-col justify-center items-start">
-      <img :src="url" class="w-[163px] h-[206px] rounded-[10px] bg-center bg-cover">
+      <img :src="url" class="w-[163px] h-[206px] rounded-[10px] bg-center bg-cover bg-center">
       <h1 class="font-medium text-[17px] text-[#4C3B2A]">{{ title }}</h1>
       <span class="text-[10px] text-[#7F654C]">{{ nevisande }}</span>
     </div>
