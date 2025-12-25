@@ -46,7 +46,8 @@ const tabs = [
            font-medium text-[14px]
            flex items-center justify-center gap-x-5 text-[#BAC6D3]">
           <div v-for="tab in tabs" :key="tab.id" @click="activeTab = tab.id" class="h-full cursor-pointer flex items-center px-2
-             border-b-2 transition-all duration-200" :class="activeTab === tab.id
+             border-b-2 transition-all duration-200" 
+             :class="activeTab === tab.id
                 ? 'border-yellow-500 text-yellow-500'
                 : 'border-transparent text-[#BAC6D3]'
               ">
